@@ -1,0 +1,9 @@
+<h1>
+    Inicia sesión
+</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="email" placeholder="Username">
+    <input type="password" formControlName="password" placeholder="Password">
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>
